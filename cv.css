@@ -218,6 +218,58 @@ section {
     backdrop-filter: blur(3px);
 }
 
+/* ===== PHOTO DANS LA SECTION PRÉSENTATION ===== */
+.intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.intro-text {
+    flex: 1;
+    text-align: left;
+}
+
+.intro-photo {
+    flex: 0 0 220px;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-photo img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #00fff9;
+    box-shadow: 0 0 20px rgba(0, 255, 249, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-photo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 249, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .intro-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .intro-photo {
+        margin-bottom: 2rem;
+    }
+
+    .intro-text {
+        text-align: center;
+    }
+}
+
+
 /* Expérience */
 .experience {
     background: linear-gradient(135deg, #05060a 0%, #0d1b2a 100%);
